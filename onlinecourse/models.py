@@ -99,7 +99,7 @@ class Enrollment(models.Model):
 # Has a Many-To-One relationship with the course
 # Has question text and a grade point for each question
 class Question(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='questions')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
     question_text = models.CharField(max_length=200)
     question_grade = models.IntegerField(default=50)
 
